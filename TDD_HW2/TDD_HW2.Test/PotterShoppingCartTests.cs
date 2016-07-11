@@ -29,7 +29,7 @@ namespace TDD_HW2.Tests
         }
 
         [TestMethod()]
-        public void Buy_One_Firt_And_One_Second_Should_Return_200()
+        public void Buy_One_Firt_And_One_Second_Should_Return_190()
         {
             // arrange
             var target = new List<Book>()
@@ -37,7 +37,7 @@ namespace TDD_HW2.Tests
                new Book() { BookName = HarryPotter.First, Nums = 1},
                new Book() { BookName = HarryPotter.Second, Nums = 1},
             };
-            var expect = 200;
+            var expect = 190;
             // act
             var actual = target.CaculatePrice(x => x.BookName);
 
