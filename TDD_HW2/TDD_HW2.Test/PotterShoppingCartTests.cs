@@ -12,12 +12,24 @@ namespace TDD_HW2.Tests
     public class PotterShoppingCartTests
     {
         [TestMethod()]
-        public void GetPriceTest()
+        public void Buy_Firt_And_Second_Should_Return_200()
         {
             // arrange
+            var orders = new List<HarryPotter>()
+            {
+                HarryPotter.First,
+                HarryPotter.Second,
+                //HarryPotter.First,
+            };
+            var expect = 200;
+
             // act
+            var target = new PotterShoppingCart<HarryPotter>();
+            var actual = target.GetPrice(orders);
+
             // assert
-            Assert.Fail();
+            Assert.AreEqual(expect, actual);
         }
     }
 }
+

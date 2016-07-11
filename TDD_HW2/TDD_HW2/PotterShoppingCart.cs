@@ -6,12 +6,24 @@ using System.Threading.Tasks;
 
 namespace TDD_HW2
 {
-    public class PotterShoppingCart
+    public class PotterShoppingCart<T>
     {
 
-        public int GetPrice(int num)
+        public int GetPrice(IEnumerable<T> books)
         {
-            return num * 100;
+            //var num = books.GroupBy(selector);
+
+            return books.Count() * 100;
         }
     }
+
+    public enum HarryPotter
+    {
+        First,
+        Second,
+        Third,
+        Fourth,
+        Fifth,
+    }
+
 }
