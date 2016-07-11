@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDD_HW2
+namespace TDD_HW2.Extension
 {
-    public class PotterShoppingCart<T>
+    public static class PotterShoppingCart//<T, TKey>
     {
 
-        public int GetPrice(IEnumerable<T> books)
+        public static int CaculatePrice<T, TKey>(this IEnumerable<T> books, Func<T, TKey> selector)
         {
-            //var num = books.GroupBy(selector);
-
+            var groups = books.GroupBy(selector);
+            
             return books.Count() * 100;
         }
     }
 
-    public enum HarryPotter
-    {
-        First,
-        Second,
-        Third,
-        Fourth,
-        Fifth,
-    }
+    //public enum HarryPotter
+    //{
+    //    First,
+    //    Second,
+    //    Third,
+    //    Fourth,
+    //    Fifth,
+    //}
 
 }
