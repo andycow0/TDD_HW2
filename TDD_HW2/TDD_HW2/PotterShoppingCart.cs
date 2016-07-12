@@ -19,7 +19,7 @@ namespace TDD_HW2.Extension
             if (groupsNums == 1)
             {
                 var nums = books.Count();
-                sum = nums * singlePrice;
+                sum = singlePrice * groupsNums * nums;
             }
             else if (groupsNums == 2)
             {
@@ -27,8 +27,17 @@ namespace TDD_HW2.Extension
                 //{
                 //    var group1 = books.Intersect(g);
                 //}
-                sum = singlePrice * 2 * 0.95;
+                sum = singlePrice * groupsNums * 0.95;
             }
+            else if (groupsNums == 3)
+            {
+                //foreach (var g in groups)
+                //{
+                //    var group1 = books.Intersect(g);
+                //}
+                sum = singlePrice * groupsNums * 0.9;
+            }
+           
             return sum;
         }
     }

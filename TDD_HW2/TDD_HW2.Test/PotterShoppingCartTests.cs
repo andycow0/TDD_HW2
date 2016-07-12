@@ -44,6 +44,25 @@ namespace TDD_HW2.Tests
             // assert
             Assert.AreEqual(expect, actual);
         }
+
+        [TestMethod()]
+        public void Buy_One_For_Firt_Second_Third_Should_Return_270()
+        {
+            // arrange
+            var target = new List<Book>()
+            {
+               new Book() { BookName = HarryPotter.First, Nums = 1},
+               new Book() { BookName = HarryPotter.Second, Nums = 1},
+               new Book() { BookName = HarryPotter.Third, Nums = 1},
+            };
+            var expect = 270;
+            // act
+            var actual = target.CaculatePrice(x => x.BookName);
+
+            // assert
+            Assert.AreEqual(expect, actual);
+        }
+
     }
 
     internal enum HarryPotter
