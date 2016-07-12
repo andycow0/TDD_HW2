@@ -23,21 +23,20 @@ namespace TDD_HW2.Extension
             }
             else if (groupsNums == 2)
             {
-                //foreach (var g in groups)
-                //{
-                //    var group1 = books.Intersect(g);
-                //}
                 sum = singlePrice * groupsNums * 0.95;
             }
             else if (groupsNums == 3)
             {
-                //foreach (var g in groups)
-                //{
-                //    var group1 = books.Intersect(g);
-                //}
                 sum = singlePrice * groupsNums * 0.9;
             }
-           
+            else if (groupsNums == 4)
+            {
+                sum = singlePrice * groupsNums * 0.8;
+            }
+            else if (groupsNums == 5)
+            {
+                sum = singlePrice * groupsNums * 0.75;
+            }
             return sum;
         }
     }
